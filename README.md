@@ -1,49 +1,53 @@
-How to program scenarios
-Overview
-Local Development  
-Setup : 
-Clone Repository - see nathan@studiocypher.com for an invite to repo
-Repo is in mercurial so use sourcetree or tortoisehg (https://tortoisehg.bitbucket.io/)
-Build Game:
-Install node - https://nodejs.org/en/download/
-You probably need to restart windows
-In the command prompt window, run the following commands
-Npm install -g typescript
-Npm install -g tslint
-Npm install
-Npm run watch
+# Local Development  
+
+### Setup : 
+
+### Build Game:
+1. Install node - https://nodejs.org/en/download/
+2. You probably need to restart windows
+3. In the command prompt window, run the following commands
+4. Npm install -g typescript
+5. Npm install -g tslint
+6. Npm install
+7. Npm run watch
+
 You may hit ctrl-c to stop the watch process after it completes once
-Install Vagrant to allow for local testing
-Get Vagrant here: https://www.vagrantup.com/downloads.html
-Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
-In a command prompt window, navigate to directory you installed the repo to
-Type ‘vagrant up’ and press enter
-View game in browser
-In a browser address window, enter: 192.168.33.15
-You may need to run ‘vagrant up’ again if you rebooted during installation of node
 
-Editing Level Files
-Install the tiled editor - http://www.mapeditor.org/
-Run the tiled editor
-Open a scenario file. File->open
-The files are found at [repo directory]/map_editor_files
-The scenario files are Scenario_1.json to Scenario_10.json
-Level editing overview
-The level editor has a 10 x 10 grid of spaces which corresponds to the given map space
-There are two conceptual “layers” - one with the different building types on top, and another with the water/lake tiles.
-There are also a set of properties that correspond to both the start conditions and win conditions of the map
-Object Placement
-First, make sure the object layer is selected
+8. Install Vagrant to allow for local testing
+9. Get Vagrant here: https://www.vagrantup.com/downloads.html
+10. Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
+11. In a command prompt window, navigate to directory you installed the repo to
+12. Type ‘vagrant up’ and press enter
 
-Secondly, select the item that you wish to place in the world.
+### View game in browser
+1. In a browser address window, enter: 192.168.33.15
+2. You may need to run ‘vagrant up’ again if you rebooted during installation of node
 
-You can then place the item in the world.
-IMPORTANT NOTE: The blue rectangles are lake types only, and should be placed on the Lake Layer
-Lake Placement
-See object placement, but select the “Lake” layer first.
-The blue square is a normal water tile
-The blue square marked “LS” is a lake source, and has regenerating quality to help clear out dirtied water.
-Editing level goals and properties
+### Editing Level Files
+1. Install the tiled editor - http://www.mapeditor.org/
+2. Run the tiled editor
+3. Open a scenario file. File->open
+4. The files are found at [repo directory]/map_editor_files
+5. The scenario files are Scenario_1.json to Scenario_10.json
+6. Level editing overview
+7. The level editor has a 10 x 10 grid of spaces which corresponds to the given map space
+8. There are two conceptual “layers” - one with the different building types on top, and another with the water/lake tiles.
+9. There are also a set of properties that correspond to both the start conditions and win conditions of the map
+
+### Object Placement
+1. First, make sure the object layer is selected
+
+2. Secondly, select the item that you wish to place in the world.
+
+3. You can then place the item in the world.
+4. IMPORTANT NOTE: The blue rectangles are lake types only, and should be placed on the Lake Layer
+
+### Lake Placement
+1. See object placement, but select the “Lake” layer first.
+2. The blue square is a normal water tile
+3. The blue square marked “LS” is a lake source, and has regenerating quality to help clear out dirtied water.
+
+### Editing level goals and properties
 To view a map’s properties, select Map -> Map Properties
 You will see something similar to the following:
 
@@ -93,7 +97,7 @@ win_population
 disable_policy
 This is an item of a "bool" type. If it is present and checked, the policy menu will not show up in the level
 
-Editing Tile Values
+### Editing Tile Values
 Tile values are stored in [repo directory]/json/Tiles.json
 value explanations (if a value is listed but not explained in this list, it is a holdover from an earlier version and can be ignored)
 "integrity" - the "strength" of an item that decreases every second, can be repaired
@@ -106,12 +110,12 @@ value explanations (if a value is listed but not explained in this list, it is a
     "evaporation_per_usage": how much water evaporates
     "quality_drop_per_usage": used in the formula current_water_usage * current_population * quality_drop_per_usage
 
-Editing Other Values:
+### Editing Other Values:
 Misc values are stored in [repo directory]/json/Vars.json
 This currently stores the money cost of repairs and how many quality points an item degrades per second
 "tutorial_text" is the text that shows up when the player clicks on the "help" button under CJ's head
 
-Linking the game to a survey:
+### Linking the game to a survey:
 Go to google forms: https://docs.google.com/forms/
 Create a new form
 Create all questions
@@ -125,7 +129,7 @@ In the form creation window, click "Responses"
 Then click the green button with the plus symbol on it "Save responses in sheets"
 All responses will then be collated into the sheet 
 
-Deploying to web
+### Deploying to web
 To deploy to the web, copy the following files and directories to the web:
 Files
 howtoplay.html
