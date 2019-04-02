@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--TODO: Have a better title-->
+    <title>Water Game</title>
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #surveyWrap{
+            position: fixed;
+            background: rgba(0,0,0,0.5);
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+        }
+        #closeSurvey{
+            font-size: 3em;
+            font-weight: bold;
+            margin-left: 10px;
+            color: white;
+            text-shadow: 3px 3px rgba(0,0,0,0.3);
+            position: relative;
+            top: -240px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="src/app.ts"></script>
+</head>
+<body>
+<div class="app">
+    <div id="gameDiv"></div>
+</div>
+<div id="surveyWrap">
+    <iframe name="theSurvey" width="800" height="500" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    <div id="closeSurvey">&times;</div>
+</div>
+<script type="text/javascript" src="lib/phaser.js"></script>
+<script type="text/javascript" src="build/bundle.js"></script>
+</body>
+</html>

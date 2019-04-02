@@ -1,0 +1,18 @@
+{
+  "name": "water-game",
+  "version": "0.1.0",
+  "description": "Based on phaser-typescript-boilerplate",
+  "main": "index.html",
+  "scripts": {
+    "prepublish": "typings install",
+    "watch": "webpack --watch"
+  },
+  "homepage": "https://studiocypher.com",
+  "devDependencies": {
+    "ts-loader": "^2.0.0",
+    "tslint": "^4.3.1",
+    "typescript": "^2.1.5",
+    "typings": "^2.1.0",
+    "webpack": "^2.2.1"
+  }
+}

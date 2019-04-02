@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Level 1",
+    "sheet": "chapterselect",
+    "frame": "level-1",
+    "level_id": "scenario_1",
+    "x": 170,
+    "y": 158
+  },
+  {
+    "name": "Level 2",
+    "sheet": "chapterselect",
+    "frame": "level-2",
+    "level_id": "scenario_2",
+    "x": 321,
+    "y": 158
+  },
+  {
+    "name": "Level 3",
+    "sheet": "chapterselect",
+    "frame": "level-3",
+    "level_id": "scenario_3",
+    "x": 473,
+    "y": 158
+  },
+  {
+    "name": "Level 4",
+    "sheet": "chapterselect",
+    "frame": "level-4",
+    "level_id": "scenario_4",
+    "x": 625,
+    "y": 158
+  },
+  {
+    "name": "Level 5",
+    "sheet": "chapterselect",
+    "frame": "level-5",
+    "level_id": "scenario_5",
+    "x": 626,
+    "y": 299
+  },
+  {
+    "name": "Level 6",
+    "sheet": "chapterselect",
+    "frame": "level-6",
+    "level_id": "scenario_6",
+    "x": 626,
+    "y": 438
+  },
+  {
+    "name": "Level 7",
+    "sheet": "chapterselect",
+    "frame": "level-9",
+    "level_id": "scenario_7",
+    "x": 473,
+    "y": 438
+  },
+  {
+    "name": "Level 8",
+    "sheet": "chapterselect",
+    "frame": "level-8",
+    "level_id": "scenario_8",
+    "x": 321,
+    "y": 438
+  },
+  {
+    "name": "Level 9",
+    "sheet": "chapterselect",
+    "frame": "level-7",
+    "level_id": "scenario_9",
+    "x": 170,
+    "y": 438
+  },
+  {
+    "name": "Level 10",
+    "sheet": "chapterselect",
+    "frame": "level-10",
+    "level_id": "scenario_10",
+    "x": 170,
+    "y": 299
+  }
+]

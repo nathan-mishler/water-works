@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+<head>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!--<base href="http://waterworks.indiana.edu/water/" />-->
+    <style type="text/css">
+        @font-face { font-family: Arctik; src: url('fonts/arctik/arctik.ttf'); }
+
+        h1, h2, h3, h4{
+            font-family: Arctik, sans-serif;
+        }
+        
+        #main{
+            margin-top: 1%;
+            margin-left: 25%;
+            margin-right: 25%;
+            z-index: 1;
+            position: relative;
+            font-family: sans-serif;
+            font-size: 2vw;
+        }
+
+        #main > .howToPlayImage {
+            position: relative;
+            width: 15vw;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #backToHome {
+            position: relative;
+            background-color: #b3d9ff;
+        }
+
+        .button {
+            width: 180px;
+            height: 40px;
+            display: inline-block;
+            left: -30px;
+            top: -5px;
+            position: absolute;
+            border: 8px solid black;
+            padding: 3px;
+            z-index: 2;
+            text-decoration: none;
+        }
+
+        .holder {
+            width: 152px;
+            height: 52px;
+            display: inline-block;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .light {
+            position: absolute;
+            width: 280px;
+            height: 110px;
+            left: -60px;
+            top: -25px;
+            background-image: radial-gradient(ellipse closest-side, rgba(255, 255, 0,1), rgba(255, 255, 0,0) 100%);
+        }
+
+        #buttonText{
+            position: relative;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Arctik, sans-serif;
+            color: black;
+            top: 7px;
+        }
+
+        #backToHomeButton{
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-bottom: 1%;
+            z-index: 1;
+            position: relative;
+            font-family: sans-serif;
+            font-size: 30px;
+            cursor:pointer;
+        }
+        <!--
+
+        #game_modes {
+            margin-left: 16%;
+        }
+
+        #career {
+            margin-left: 20%;
+        }
+
+        /*#CB_full {*/
+            /*margin-left: 15%;*/
+        /*}*/
+
+        #green_square {
+            margin-left: 15%;
+        }
+
+        #popup_1 {
+            margin-left: 13%;
+        }
+
+        /*#popup_2 {*/
+            /*margin-left: 13%;*/
+        /*}*/
+
+        #completed_pipes {
+            margin-left: 14%;
+        }
+
+        #bottom_left_buttons {
+            margin-left: 22%;
+        }
+
+        #CB_icon {
+            margin-left: 25%;
+        }
+        -->
+
+    </style>
+</head>
+<body>
+
+
+<div id="main">
+    <h1>Playing WaterWorks</h1>
+    <p>Let's walk through the first scenario. After that we'll leave the rest for you to explore!
+    	You can start by choosing either <span style="font-weight: bold">Career</span> or <span style="font-weight: bold">Sandbox</span> mode. </p>
+    <img alt="" class="howToPlayImage" id="game_modes" src="images/howtoplay/game_mode_btns.png"/>
+    <p>If you're new to the game, we recommend starting with Career mode and saving 
+        Sandbox mode for when you're more comfortable with the game mechanics.</p>
+    <img alt="" class="howToPlayImage" id="career" src="images/howtoplay/top_left_career.png" />
+    <p>On the Career page, select the first scenario. This will give you an introduction 
+    	to putting together a water system.</p>
+    <img alt="" class="howToPlayImage" id="CB_icon" src="images/howtoplay/CB_icon.png" />
+    <p>Meet CB. She is here to help you understand
+    	how the water system works. If you get stuck, just click on her and
+    	she'll help you out.</p>
+    <img alt="" class="howToPlayImage" id="green_square" src="images/howtoplay/first_scenario_green_square.png" />
+    <p>In the first scenario, you will see a water system that is nearly complete.
+        To complete the system, click on the gap between the pipes as shown here.</p>
+    <img alt="" class="howToPlayImage" id="popup_1" src="images/howtoplay/first_scenario_popup_1.png" />
+    <p>This brings up a pop-up menu that you can use to select what you want to put in this square.
+         </p>
+    <img alt="" class="howToPlayImage" id="completed_pipes" src="images/howtoplay/first_scenario_completed_pipes.png" />
+    <p>Click on the pipe icon to connect the existing pipes so that the water can flow from beginning to end! 
+    </p>
+<!-------------------------------------------------------------------------------------------------------------------->
+    <img alt="" class="howToPlayImage" id="submenu_wwplant" src="images/howtoplay/submenu_wwplant.png" />
+    <p>Click on the waste water treatment plant to choose from different types of wastewater treatment plants. 
+    </p>
+
+    <img alt="" class="howToPlayImage" id="waste_water" src="images/howtoplay/waste water.png" />
+    <p>The waste water treatment plant looks as above.
+    </p>
+
+    <img alt="" class="howToPlayImage" id="submenu_infra" src="images/howtoplay/submenu_infra.png" />
+    <p>You have a choice between the water source and water tower as the infrastructure elements.
+    </p>
+
+    <img alt="" class="howToPlayImage" id="submenu_dwplant_name" src="images/howtoplay/submenu_dwplant_name.png" />
+    <p>Click on the Primary, Secondary or Tertiary drinking water treament plants to install them.
+    </p>
+
+    <img alt="" class="howToPlayImage" id="all" src="images/howtoplay/all.png" />
+    <p>You can also add many other types of sites. Feel free to explore!
+    </p>
+<!-------------------------------------------------------------------------------------------------------------------->
+    <img alt="" class="howToPlayImage" id="bottom_left_buttons" src="images/howtoplay/bottom_left_buttons.png" />
+    <p>Throughout the duration of the game, you will use and become familiar with 
+    	all the different parts of the water system.<br><br>
+    	The buttons at the bottom left let you exit back to the main menu, 
+    	toggle the background music on and off, and allow you to delete a feature of the 
+    	water system that you have previously placed by clicking on it and then clicking 
+    	on the trash can.</p>
+    
+</div>
+
+<div style="text-align:center">
+	<div id="backToHomeButton">
+		<div class="holder">
+			<div class="light" style="display:none"></div>
+			<a id="backToHome" class="button"><span id="buttonText">Back to Home</span></a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+var images = ["game_modes", "career", "CB_icon", "green_square", "popup_1", "completed_pipes", "bottom_left_buttons", "submenu_wwplant", "waste_water", "submenu_infra", "submenu_dwplant_name", "all"];
+var aspectRatios = [];
+var initialWidths = [];
+var initialHeights = [];
+var smallestAllowablePercentageOfOriginalWidth = 90;
+
+for (var i = 0; i < images.length; i++)
+{
+	var image = document.getElementById(images[i]);
+	aspectRatios[i] = (image.width / image.height);
+	initialWidths[i] = image.width;
+	initialHeights[i] = image.height;
+}
+
+$( window ).load(function(){
+    var buttons = $( ".button");
+	buttons.mouseenter( function() {
+		$(this).parent().children(".light").css("display","");
+	});
+	buttons.mouseleave( function() {
+		$(this).parent().children(".light").css("display","none");
+	});
+	
+	document.getElementById("backToHome").style.fontFamily = "Arctik";
+	document.getElementById("main").style.fontSize = "30px";
+});
+
+$(window).resize(function(){
+	var newFontSize = window.innerWidth * 2 / 100;
+	// var newImageWidth = window.innerWidth * 15 / 100;
+
+	if (newFontSize < 20)
+	{
+		newFontSize = 20;
+	}
+
+	// if (newImageWidth < 20)
+	// {
+	// 	newImageWidth = 20;
+	// }
+
+	document.getElementById("main").style.fontSize = "" + newFontSize + "px";
+
+	for (var i = 0; i < images.length; i++)
+	{
+		var image = document.getElementById(images[i]);
+		image.height = (image.width / aspectRatios[i]);
+		if (image.width * (100 / smallestAllowablePercentageOfOriginalWidth) < initialWidths[i])
+		{
+			image.width = initialWidths[i] * (smallestAllowablePercentageOfOriginalWidth / 100);
+		}
+		if (image.height * (100 / smallestAllowablePercentageOfOriginalWidth) < initialHeights[i])
+		{
+			image.height = initialHeights[i] * (smallestAllowablePercentageOfOriginalWidth / 100);
+		}
+	}
+});
+
+document.getElementById("backToHome").addEventListener('click', backToHome);
+
+//document.getElementById("game_modes").left = 700;
+    
+function backToHome(){
+	window.location = "index.html";
+}
+
+// var redraw = function(){
+// 	var rect = document.getElementById("main").getBoundingClientRect();
+//
+// 	var newLeft = rect.left + (rect.width * (1/40));
+// 	var newTop = rect.top + (rect.height * (9/10));
+//
+// 	control.style.left =  newLeft + "px";
+// 	control.style.top = newTop + "px";
+// }
+
+</script>
+
+</body>
+</html>

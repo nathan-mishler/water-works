@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <style type="text/css">
+        @font-face {
+            font-family: Arctik;
+            src: url('fonts/arctik/arctik.ttf');
+        }
+
+        h1, h2, h3, h4 {
+            font-family: Arctik, sans-serif;
+        }
+
+        #main, #main2, #headerDiv, #diagramInstructions {
+            margin-left: 25%;
+            margin-right: 25%;
+            z-index: 1;
+            position: relative;
+            font-family: sans-serif;
+            font-size: 2vw;
+        }
+
+        #main {
+            margin-top: 1%;
+        }
+
+        #main2 {
+            margin-bottom: 1%;
+        }
+
+        #clickthroughDiagram {
+            left: 25%;
+            margin-right: 25%;
+            margin-top: 1%;
+            z-index: 1;
+            position: relative;
+            width: 50vw;
+            height: 38vw;
+        }
+
+        #clickthroughDiagram > .clickthroughImage {
+            position: absolute;
+            width: 50vw;
+        }
+
+        #tour_2, #tour_3, #tour_4, #tour_5, #tour_6, #tour_7 {
+            width: 30%;
+            height: 30%;
+            position: absolute;
+        }
+
+        #tour_2 {
+            left: 25%;
+            top: 0;
+        }
+
+        #tour_3, #tour_5, #tour_6 {
+            left: 0;
+            top: 25%;
+        }
+
+        #tour_4 {
+            left: 60%;
+            top: 15%;
+        }
+
+        #tour_7 {
+            left: 20%;
+            top: 75%;
+        }
+
+        #tour_8, #tour_9, #tour_10, #tour_11, #tour_12, #tour_13, #tour_14, #tour_15, #tour_16, #tour_17, #tour_18, #tour_19, #tour_20, #tour_21, #tour_22, #tour_23 {
+            width: 20%;
+            height: 30%;
+            position: absolute;
+        }
+
+        #tour_8, #tour_9, #tour_10, #tour_11, #tour_12 {
+            left: 10%;
+            top: 55%;
+        }
+
+        #tour_13 {
+            left: 20%;
+            top: 35%;
+        }
+
+        #tour_14 {
+            left: 50%;
+            top: 32%;
+        }
+
+        #tour_15, #tour_16, #tour_17, #tour_18, #tour_19 {
+            left: 65%;
+            top: 55%;
+        }
+
+        #tour_20 {
+            left: 77%;
+            top: 62%;
+        }
+
+        #tour_21 {
+            left: 36%;
+            top: 56%;
+        }
+
+        #tour_22 {
+            left: 30%;
+            top: 58%;
+        }
+
+        #tour_23 {
+            left: 58%;
+            top: 68%;
+        }
+
+        /*#descriptionText > .descriptionText{*/
+        /*margin-left: 25%;*/
+        /*margin-right: 25%;*/
+        /*position: relative;*/
+        /*top: 610px;*/
+        /*margin-bottom: 1%;*/
+        /*display: block;*/
+        /*font-family: sans-serif;*/
+        /*font-size: 2vw;*/
+        /*}*/
+
+        #backToHome {
+            position: relative;
+            background-color: #b3d9ff;
+        }
+
+        .button {
+            width: 180px;
+            height: 40px;
+            display: inline-block;
+            left: -30px;
+            border: 8px solid black;
+            padding: 3px;
+            z-index: 2;
+            text-decoration: none;
+        }
+
+        .holder {
+            width: 152px;
+            height: 52px;
+            display: inline-block;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .light {
+            position: absolute;
+            width: 280px;
+            height: 110px;
+            left: -60px;
+            top: -25px;
+            background-image: radial-gradient(ellipse closest-side, rgba(255, 255, 0, 1), rgba(255, 255, 0, 0) 100%);
+        }
+
+        #backToHomeButton {
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-bottom: 1%;
+            z-index: 1;
+            position: relative;
+            font-family: sans-serif;
+            font-size: 30px;
+        }
+
+        #backToHome {
+            position: relative;
+            background-color: #b3d9ff;
+        }
+
+        .button {
+            width: 180px;
+            height: 40px;
+            display: inline-block;
+            left: -30px;
+            border: 8px solid black;
+            padding: 3px;
+            z-index: 2;
+            text-decoration: none;
+        }
+
+        .holder {
+            width: 152px;
+            height: 52px;
+            display: inline-block;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .light {
+            position: absolute;
+            width: 280px;
+            height: 110px;
+            left: -60px;
+            top: -25px;
+            background-image: radial-gradient(ellipse closest-side, rgba(255, 255, 0, 1), rgba(255, 255, 0, 0) 100%);
+        }
+
+        #buttonText {
+            position: relative;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Arctik, sans-serif;
+            color: black;
+            top: 7px;
+        }
+
+        #backToHomeButton {
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-bottom: 1%;
+            z-index: 1;
+            position: relative;
+            font-family: sans-serif;
+            font-size: 30px;
+        }
+
+    </style>
+    <link href="js/btour/bootstrap-tour-standalone.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/btour/bootstrap-tour-standalone.js"></script>
+    <script type="text/javascript">
+        // var initialWidths = [];
+        // var initialHeights = [];
+        // var smallestAllowablePercentageOfOriginalWidth = 90;
+        var images;
+        var images_2;
+        // var imageFiles;
+        var clickthroughIndex = 0;
+        var keyCodeLastFrame;
+        // var descriptionText;
+        var clickthroughDiagram;
+        var tour = new Tour({autoscroll: false});
+
+        function initializeArrays() {
+            images = ["systemdrawing_background_1",
+                "systemdrawing_precipitation_2",
+                "systemdrawing_extra_3",
+                "systemdrawing_extra_4",
+                "systemdrawing_extra_5",
+                null, null,
+                "systemdrawing_DWTP_combo_6",
+                "systemdrawing_DWTP_popup_7",
+                null, null, null,
+                "remove 7, add 8",
+                "systemdrawing_res_9",
+                "systemdrawing_WWTP_10",
+                "systemdrawing_WWTP_popup_11",
+                null, null, null,
+                "remove 11, add 12",
+                "systemdrawing_house_13",
+                "systemdrawing_well_14",
+                "systemdrawing_septic_15"];
+
+            images_2 = ["systemdrawing_background_1",
+                "systemdrawing_precipitation_2",
+                "systemdrawing_extra_3",
+                "systemdrawing_extra_4",
+                "systemdrawing_extra_5",
+                "systemdrawing_DWTP_combo_6",
+                "systemdrawing_DWTP_popup_7",
+                "systemdrawing_watertower_8",
+                "systemdrawing_res_9",
+                "systemdrawing_WWTP_10",
+                "systemdrawing_WWTP_popup_11",
+                "systemdrawing_road_12",
+                "systemdrawing_house_13",
+                "systemdrawing_well_14",
+                "systemdrawing_septic_15"];
+        }
+
+        function backToHome() {
+            window.location = "index.html";
+        }
+
+        function next() {
+            tour.next();
+        }
+
+        function advance() {
+            console.log("advance:" + clickthroughIndex);
+            if (clickthroughIndex < 23) {
+                clickthroughIndex++;
+                if (clickthroughIndex >= 3 && clickthroughIndex <= 5) {
+                    document.getElementById(images[clickthroughIndex - 1]).style.display = "none";
+                    if (images[clickthroughIndex] != null)
+                        document.getElementById(images[clickthroughIndex]).style.display = "block";
+                }
+                else if (clickthroughIndex === 12) {
+                    document.getElementById("systemdrawing_DWTP_popup_7").style.display = "none";
+                    document.getElementById("systemdrawing_watertower_8").style.display = "block";
+                } else if (clickthroughIndex === 19) {
+                    document.getElementById("systemdrawing_WWTP_popup_11").style.display = "none";
+                    document.getElementById("systemdrawing_road_12").style.display = "block";
+                } else {
+                    if (images[clickthroughIndex] != null)
+                        document.getElementById(images[clickthroughIndex]).style.display = "block";
+                }
+            }
+        }
+
+        function goBack() {
+            console.log("goback:" + clickthroughIndex);
+            if (clickthroughIndex > 0) {
+                clickthroughIndex--;
+                if (clickthroughIndex >= 2 && clickthroughIndex <= 4) {
+                    if (images[clickthroughIndex + 1] != null)
+                        document.getElementById(images[clickthroughIndex + 1]).style.display = "none";
+                    document.getElementById(images[clickthroughIndex]).style.display = "block";
+                }
+                else if (clickthroughIndex === 11) {
+                    document.getElementById("systemdrawing_DWTP_popup_7").style.display = "block";
+                    document.getElementById("systemdrawing_watertower_8").style.display = "none";
+                } else if (clickthroughIndex === 18) {
+                    document.getElementById("systemdrawing_WWTP_popup_11").style.display = "block";
+                    document.getElementById("systemdrawing_road_12").style.display = "none";
+                } else {
+                    if (images[clickthroughIndex + 1] != null)
+                        document.getElementById(images[clickthroughIndex + 1]).style.display = "none";
+                }
+            }
+        }
+
+        $(window).load(function () {
+            var image_1;
+            var image_2;
+            initializeArrays();
+            for (var i = 0; i < images.length; i++) {
+                image_1 = document.getElementById(images[i]);
+                if (image_1 != null) {
+                    image_1.height = image_1.width / 1.294; // clickthrough diagram's background image is 792 x 612
+                }
+            }
+
+
+            $(".button").hover(function () {
+                $(this).siblings(".light").show();
+            }, function () {
+                $(this).siblings(".light").hide();
+            });
+
+            document.getElementById("backToHome").style.fontFamily = "Arctik";
+
+
+            clickthroughDiagram = document.getElementById("clickthroughDiagram");
+            clickthroughDiagram.width = window.innerWidth / 2;
+            clickthroughDiagram.height = clickthroughDiagram.width / 1.294;
+
+            for (var j = 0; j < images_2.length; j++) {
+                image_2 = document.getElementById(images_2[j]);
+                if (image_2 != null) {
+                    image_2.width = clickthroughDiagram.width;
+                    image_2.height = clickthroughDiagram.height;
+                }
+            }
+
+            clickthroughDiagram.addEventListener("click", next);
+            //clickthroughDiagram.addEventListener("tap", next);
+
+            document.getElementById("backToHome").addEventListener('click', backToHome);
+
+            // onkeydown = function (event) {
+            //     console.log(event.keyCode);
+            //
+            //     var key = event.keyCode;
+            //     if (keyCodeLastFrame != null && key === keyCodeLastFrame) {
+            //         return;
+            //     }
+            //     keyCodeLastFrame = key;
+            //     if (key === 37 && event.target === document.body) {
+            //         event.preventDefault();
+            //         goBack();
+            //     }
+            //     else if ((key === 32 || key === 39) && event.target === document.body) {
+            //         event.preventDefault();
+            //         advance();
+            //     }
+            // };
+            //
+            // onkeyup = function () {
+            //     keyCodeLastFrame = null;
+            // };
+
+            tourMng();
+        });
+
+        $(window).resize(function () {
+            var newFontSize = window.innerWidth * 2 / 100;
+            // var newImageWidth = window.innerWidth * 15 / 100;
+            // var newImageHeight = newImageWidth / 1.294;
+            var newClickthroughDiagramWidth = window.innerWidth / 2;
+            var newClickthroughDiagramHeight = newClickthroughDiagramWidth / 1.294;
+
+            if (newFontSize < 20) {
+                newFontSize = 20;
+            }
+
+            // if (newImageWidth < 20)
+            // {
+            //     newImageWidth = 20;
+            //     newImageHeight = 20 / 1.294;
+            // }
+
+            if (newClickthroughDiagramWidth < 20) {
+                newClickthroughDiagramWidth = 20;
+                newClickthroughDiagramHeight = 20 / 1.294;
+            }
+
+            document.getElementById("headerDiv").style.fontSize = "" + newFontSize + "px";
+            document.getElementById("main").style.fontSize = "" + newFontSize + "px";
+            document.getElementById("main2").style.fontSize = "" + newFontSize + "px";
+            document.getElementById("diagramInstructions").style.fontSize = "" + newFontSize + "px";
+
+            for (var i = 0; i < images_2.length; i++) {
+                var image = document.getElementById(images_2[i]);
+                if (image != null) {
+                    image.width = newClickthroughDiagramWidth;
+                    image.height = newClickthroughDiagramHeight;
+                }
+            }
+
+            clickthroughDiagram.width = newClickthroughDiagramWidth;
+            clickthroughDiagram.height = newClickthroughDiagramHeight;
+        });
+
+        function tourMng() {
+
+            tour.backdrop = true;
+            tour.smartPlacement = true;
+            tour.autoscroll = false;
+
+
+            tour.addStep({
+                element: "#clickthroughDiagram",
+                title: "Introduction",
+                content: "Water is essential to our lives. Do you know how clean water reaches the home and what happens to the water when it leaves the home? Let us walk you through how the water system works!",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_2",
+                title: "The Water Cycle",
+                content: "Water vapor in the air forms clouds, which then condenses into precipitation like rain and snow.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_3",
+                title: "The Water Cycle",
+                content: "Precipitation on land either runs off into bodies of water or can seep into the ground. " +
+                "This then recharges the water stored in the ground.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_4",
+                title: "The Water Cycle",
+                content: "Water can also be taken up by the root systems of plants. Once absorbed by plants, water " +
+                "can be turned back into water vapor by a process called evapotranspiration.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_5",
+                title: "The Water Cycle",
+                content: "Evaporation is the process by which water is turned back into water vapor with the addition " +
+                "of sunlight or heat. This process completes the cycle and returns water back to the atmosphere.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_6",
+                title: "Surface Water",
+                content: "Water in bodies of water like lakes and rivers is called surface water. " +
+                "It is more easily polluted and requires extensive treatment.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_7",
+                title: "Ground Water",
+                content: "Ground water is the name for stores of water that exist underground " +
+                "in porous rocks and is collected by drilling wells into aquifers. " +
+                "Ground water is usually much cleaner than surface water, because it is filtered by these layers of rocks.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_8",
+                title: "Drinking Water Treatment",
+                content: "This is a drinking water treatment plant. Water can be drawn from both surface water and ground water " +
+                "and is then sent to the drinking water treatment plant.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_9",
+                title: "Drinking Water Treatment",
+                content: "Water in a drinking water treatment plant undergoes three main processes: coagulation, filtration, and disinfection.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_10",
+                title: "Drinking Water Treatment: Coagulation",
+                content: "Coagulation removes dirt and other suspended solids. Coagulation adds chemicals to the water which helps sediments " +
+                "stick together and settle out of the water.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_11",
+                title: "Drinking Water Treatment: Filtration",
+                content: "During filtration, water is passed through a sand filter to further purify water.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_12",
+                title: "Drinking Water Treatment: Disinfection",
+                content: "Disinfection is the last stage and comes in different forms depending on the water treatment plant. " +
+                "Disinfection agents like chlorine are also added to protect against re-contamination in the distribution system. " +
+                "These chemicals destroy disease-producing organisms such as bacteria and viruses.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_13",
+                title: "Water Storage",
+                content: "After water is treated, it is stored to account for shifting human demands. " +
+                "Water towers also help pressurize the distribution system. The water is stored high up " +
+                "so that gravity can naturally push water down pipes.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_14",
+                title: "Distribution",
+                content: "Water runs through a distribution system until it reaches individual homes where it is used indoors " +
+                "in showers, toilets, dishwashers, and washing machines.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_15",
+                title: "Wastewater Treatment",
+                content: "Water leaves individual homes through a sewer system and is transported to a wastewater treatment plant.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_16",
+                title: "Wastewater Treatment",
+                content: "Waste water undergoes three main processes before it is released back into the environment: primary, secondary, and tertiary treatment.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_17",
+                title: "Wastewater Treatment:Primary",
+                content: "In primary treatment, wastewater is held in a settling tank. Large particles settle to the " +
+                "bottom and are scraped away. Things that cannot dissolve in water, like fats, float to the top and are scraped off.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_18",
+                title: "Wastewater Treatment:Secondary",
+                content: "In secondary treatment, water and activated sludge, which is comprised of good bacteria," +
+                " are placed together in aeration tanks that inject oxygen into the mixture. The bacteria and oxygen help " +
+                "to break down any organic material such as carbohydrates, fats, and proteins.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_19",
+                title: "Wastewater Treatment:Tertiary",
+                content: "In tertiary treatment, water goes through filters, is chlorinated to kill any remaining bacteria, " +
+                "and then is treated with sulfur dioxide to dechlorinate it. Water is then discharged back into the natural environment.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+
+            tour.addStep({
+                element: "#tour_20",
+                title: "Storm Drains",
+                content: "Household water that is used outdoors to wash cars or water lawns and gardens runs off into storm drains. " +
+                "Storm drains also collect rainwater that has run off of roads, sidewalks, and parking lots. Some water from " +
+                "storm drains is treated by wastewater treatment plants, but most is just returned back to the environment.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+            tour.addStep({
+                element: "#tour_21",
+                title: "Private Systems",
+                content: "Some households are not connected to public water distribution systems and rely on private water systems.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+            tour.addStep({
+                element: "#tour_22",
+                title: "Wells",
+                content: "Wells tap aquifers and can service single homes. Ground water is usually clean enough for consumption without treatment, " +
+                "and often users treat on site.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+            tour.addStep({
+                element: "#tour_23",
+                title: "Septic Tanks",
+                content: "Septic tanks purify wastewater after household use by acting as a settling tank and using the natural processes " +
+                "of good bacteria to break down organic matter. The water is then sent out into a leach field, which is an underground " +
+                "series of pipes with small holes. The water then drains back into the environment.",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+            tour.addStep({
+                element: "#clickthroughDiagram",
+                title: "End",
+                content: "You have now gone through the entire water system. Congratulations! " +
+                "The cyclical nature of the water system is important to remember because " +
+                "actions that happen in one part can affect every other part and these decisions eventually cycle back throughout the system. " +
+                "Now you're ready to play the game - have fun!",
+                smartPlacement: true,
+                onNext: advance,
+                onPrev: goBack
+            });
+            tour.init();
+            tour.restart();
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div id="headerDiv" align="center">
+    <h1 style="margin:auto;">About the Water System</h1>
+</div>
+<div id="clickthroughDiagram">
+    <img alt="" class="clickthroughImage" id="systemdrawing_background_1"
+         src="images/about/systemdrawing_background_1.png" width="792" height="612" style="display: block; z-index: 2">
+    <img alt="" class="clickthroughImage" id="systemdrawing_precipitation_2"
+         src="images/about/systemdrawing_clickthru_precipitation.png" width="792" height="612"
+         style="display: none; z-index: 3">
+    <img alt="" class="clickthroughImage" id="systemdrawing_extra_3" src="images/about/systemdrawing_extra_3.png"
+         width="792" height="612" style="display: none; z-index: 4">
+    <img alt="" class="clickthroughImage" id="systemdrawing_extra_4" src="images/about/systemdrawing_extra_4.png"
+         width="792" height="612" style="display: none; z-index: 5">
+    <img alt="" class="clickthroughImage" id="systemdrawing_extra_5" src="images/about/systemdrawing_extra_5.png"
+         width="792" height="612" style="display: none; z-index: 6">
+    <img alt="" class="clickthroughImage" id="systemdrawing_DWTP_combo_6"
+         src="images/about/systemdrawing_DWTP_combo_6.png" width="792" height="612" style="display: none; z-index: 7">
+    <img alt="" class="clickthroughImage" id="systemdrawing_DWTP_popup_7"
+         src="images/about/systemdrawing_DWTP_popup_7.png" width="792" height="612" style="display: none; z-index: 11">
+    <img alt="" class="clickthroughImage" id="systemdrawing_watertower_8"
+         src="images/about/systemdrawing_watertower_8.png" width="792" height="612" style="display: none; z-index: 12">
+    <img alt="" class="clickthroughImage" id="systemdrawing_res_9" src="images/about/systemdrawing_res_9.png"
+         width="792" height="612" style="display: none; z-index: 13">
+    <img alt="" class="clickthroughImage" id="systemdrawing_WWTP_10" src="images/about/systemdrawing_WWTP_10.png"
+         width="792" height="612" style="display: none; z-index: 14">
+    <img alt="" class="clickthroughImage" id="systemdrawing_WWTP_popup_11"
+         src="images/about/systemdrawing_WWTP_popup_11.png" width="792" height="612" style="display: none; z-index: 15">
+    <img alt="" class="clickthroughImage" id="systemdrawing_road_12" src="images/about/systemdrawing_road_12.png"
+         width="792" height="612" style="display: none; z-index: 16">
+    <img alt="" class="clickthroughImage" id="systemdrawing_house_13" src="images/about/systemdrawing_house_13.png"
+         width="792" height="612" style="display: none; z-index: 17">
+    <img alt="" class="clickthroughImage" id="systemdrawing_well_14" src="images/about/systemdrawing_well_14.png"
+         width="792" height="612" style="display: none; z-index: 18">
+    <img alt="" class="clickthroughImage" id="systemdrawing_septic_15" src="images/about/systemdrawing_septic_15.png"
+         width="792" height="612" style="display: none; z-index: 19">
+
+    <div id="tour_2"></div>
+    <div id="tour_3"></div>
+    <div id="tour_4"></div>
+    <div id="tour_5"></div>
+    <div id="tour_6"></div>
+    <div id="tour_7"></div>
+    <div id="tour_8"></div>
+    <div id="tour_9"></div>
+    <div id="tour_10"></div>
+    <div id="tour_11"></div>
+    <div id="tour_12"></div>
+    <div id="tour_13"></div>
+    <div id="tour_14"></div>
+    <div id="tour_15"></div>
+    <div id="tour_16"></div>
+    <div id="tour_17"></div>
+    <div id="tour_18"></div>
+    <div id="tour_19"></div>
+    <div id="tour_20"></div>
+    <div id="tour_21"></div>
+    <div id="tour_22"></div>
+    <div id="tour_23"></div>
+
+</div>
+
+<div id="diagramInstructions">
+
+    <p><b>Click on the image, or use the spacebar or arrow keys to advance through the system.</b></p>
+
+</div>
+<div id="main">
+    <h1 style="margin-left:20%;">About WaterWorks</h1>
+    <p><b>WaterWorks</b> is an interactive, science-based game designed for fun, learning and research. This game will
+        challenge you to
+        create working water systems in different environments and with varying constraints. By playing
+        <b>WaterWorks</b>, you will gain a better
+        understanding of how water systems work in real-world scenarios across the full cycle of water access, use,
+        treatment, and replenishment.<br/>
+    </p>
+</div>
+<div id="main2">
+    <p>
+        In addition to helping players understand, analyze, and create their own functioning water systems, <b>WaterWorks</b>
+        is a research platform
+        for assessing how players think about water. As one example, early survey and prototype work led us to believe
+        that the general population
+        is largely unaware of how their water is delivered or what happens to it after use. Fortunately, this concept
+        has a very steep
+        learning curve, and so, if the information is presented efficiently, people will be able to quickly increase
+        their understanding
+        of this important topic. <b>WaterWorks</b> exists to thus entertain, inform, and test
+        these hypotheses of increasing player comprehension.<br/><br/>
+
+        <b>WaterWorks</b> is created by an interdisciplinary team at Indiana University from the <a
+            href="https://spea.indiana.edu/" target="_blank">School of
+        Public and Environmental Affairs</a> and <a href="http://mediaschool.indiana.edu/" target="_blank">The Media
+        School</a>.<br/><br/>
+
+        Team leads: <a href="http://szattari.com" target="_blank">Shahzeen Attari</a>
+        and <a href="http://mediaschool.indiana.edu/profile/?p=sellers" target="_blank">Mike Sellers</a><br/>
+        Research: Carissa Knox and Kelsey Hinton <br/>
+        Programming: <a href="http://intrepidartisan.com" target="_blank">Ian Ford</a>, <a
+            href="http://www.shreeharsha.me" target="_blank">Shree Harsha Sridharamurthy</a>, Brent
+        Kievit-Kylar and <a href="http://www.studiocypher.com">Studio Cypher</a><br/>
+        Art: Carissa Knox <br/>
+        Sound and Music: Evan Spiegel <br/><br/>
+
+        Funding was provided by the <a href="https://iwrrc.org/" target="_blank"> Indiana Water Resources Research Center (IWRRC)</a>, <a href="http://ostromworkshop.indiana.edu/home.php" target="_blank">Vincent and
+        Elinor Ostrom Workshop on Political Theory
+        and Policy Analysis</a> and the <a href="http://sustain.indiana.edu" target="_blank">Indiana University Office
+        of Sustainability</a>. <br/><br/>
+
+        Questions? Contact <a href="mailto:waterwrx@indiana.edu">waterwrx@indiana.edu</a>
+    </p>
+</div>
+
+<div align="center">
+    <div id="backToHomeButton">
+        <div class="holder">
+            <div class="light" style="display:none"></div>
+            <a id="backToHome" class="button" href="../">
+                <div id="buttonText">Back to Home</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+{
+  "main_menu": [
+    {
+      "sheet": "watergame",
+      "frame": "popupimgs/pop_0",
+      "hover_text": "Residential",
+      "class": "ResidentialTile",
+      "type": "residential",
+      "submenu": false
+    },
+    {
+      "sheet": "watergame",
+      "frame": "popupimgs/pop_1",
+      "hover_text": "Agricultural",
+      "class": "AgriculturalTile",
+      "type": "agricultural",
+      "submenu": false
+    },
+    {
+      "sheet": "watergame",
+      "frame": "popupimgs/pop_2",
+      "hover_text": "Industrial",
+      "class": "IndustrialTile",
+      "type": "industrial",
+      "submenu": false
+    },
+    {
+      "sheet": "watergame",
+      "frame": "popupimgs/pop_3",
+      "hover_text": "Wastewater Treatment (treats sewage and other used water)",
+      "class": "WasteWaterTreatmentTile",
+      "type": "wastewatertreatment",
+      "submenu": false
+    },
+    {
+      "sheet": "watergame",
+      "frame": "popupimgs/pop_4",
+      "hover_text": "Pipe (transports water)",
+      "class": "PipeTile",
+      "type": "pipe",
+      "submenu": false
+    },
+    {
+      "sheet": "watergame",
+      "frame": "popupimgs/pop_5",
+      "hover_text": "Water Source and Storage",
+      "submenu": true
+    },
+    {
+      "sheet": "watergame",
+      "frame": "popupimgs/pop_6",
+      "hover_text": "Water Treatment (treats source water before use)",
+      "class": "TreatmentTile",
+      "type": "treatment",
+      "submenu": false
+    }
+  ],
+  "sub_menus": {
+    "Waste Water": [
+      {
+        "sheet": "watergame",
+        "frame": "popupimgs/pop_sub_ww_1",
+        "hover_text": "Primary",
+        "class": "WasteWaterTreatmentTile",
+        "type": "primary",
+        "is_upgrade": true
+      },
+      {
+        "sheet": "watergame",
+        "frame": "popupimgs/pop_sub_ww_2",
+        "hover_text": "Secondary",
+        "class": "WasteWaterTreatmentTile",
+        "type": "secondary",
+        "is_upgrade": true
+      },
+      {
+        "sheet": "watergame",
+        "frame": "popupimgs/pop_sub_ww_3",
+        "hover_text": "Tertiary",
+        "class": "WasteWaterTreatmentTile",
+        "type": "tertiary",
+        "is_upgrade": true
+      }
+    ],
+    "Water Source and Storage": [
+      {
+        "sheet": "watergame",
+        "frame": "popupimgs/pop_sub_is_1",
+        "hover_text": "Source",
+        "class": "SourceTile",
+        "type": "source"
+      },
+      {
+        "sheet": "watergame",
+        "frame": "popupimgs/pop_sub_is_2",
+        "hover_text": "Water Tower",
+        "class": "WatertowerTile",
+        "type": "watertower"
+      }
+    ],
+    "Water Treatment": [
+      {
+        "sheet": "watergame",
+        "frame": "popupimgs/pop_sub_dw_1",
+        "hover_text": "Coagulation",
+        "class": "TreatmentTile",
+        "type": "coagulation",
+        "submenu": false,
+        "is_upgrade": true
+      },
+      {
+        "sheet": "watergame",
+        "frame": "popupimgs/pop_sub_dw_2",
+        "hover_text": "Filtration",
+        "class": "TreatmentTile",
+        "type": "filtration",
+        "submenu": false,
+        "is_upgrade": true
+      },
+      {
+        "sheet": "watergame",
+        "frame": "popupimgs/pop_sub_dw_3",
+        "hover_text": "Disinfection",
+        "class": "TreatmentTile",
+        "type": "disinfection",
+        "submenu": false,
+        "is_upgrade": true
+      }
+    ]
+  }
+}

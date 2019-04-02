@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="300"
+   viewBox="0 0 400 300"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="pipe_1.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.45254835"
+     inkscape:cx="69.684839"
+     inkscape:cy="118.33221"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     showborder="true"
+     inkscape:window-width="463"
+     inkscape:window-height="423"
+     inkscape:window-x="1004"
+     inkscape:window-y="79"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-752.36216)">
+    <path
+       style="fill:#555a74;fill-opacity:1;stroke:#000000;stroke-width:0.91909379;stroke-opacity:1"
+       d="M 296.875 137.25391 A 12.988982 11.183778 0 0 0 288.7832 139.69141 L 192.0332 188.63867 A 12.988982 11.183778 0 0 0 190.63867 189.3418 L 189.64844 189.84375 L 189.71094 189.92383 A 12.988982 11.183778 0 0 0 184.86328 198.63281 A 12.988982 11.183778 0 0 0 197.85156 209.81641 A 12.988982 11.183778 0 0 0 205.98828 207.3457 L 302.61719 158.46289 A 12.988982 11.183778 0 0 0 309.86328 148.4375 A 12.988982 11.183778 0 0 0 296.875 137.25391 z "
+       transform="translate(0,752.36216)"
+       id="path4155-6-6" />
+    <ellipse
+       style="fill:#555a74;fill-opacity:1;stroke:#000000;stroke-width:0.91909379;stroke-opacity:1"
+       id="path4155-6-6-2"
+       cx="197.46094"
+       cy="951.19031"
+       rx="12.988982"
+       ry="11.183778"
+       d="m 210.44992,951.19031 c 0,6.17663 -5.81537,11.18378 -12.98898,11.18378 -7.17362,0 -12.98898,-5.00715 -12.98898,-11.18378 0,-6.17663 5.81536,-11.18378 12.98898,-11.18378 7.17361,0 12.98898,5.00715 12.98898,11.18378 z" />
+  </g>
+</svg>

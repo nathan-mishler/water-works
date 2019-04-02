@@ -1,0 +1,20 @@
+﻿{
+  "repair_cost":100,
+  "degrade_per_tick":1,
+  "policy1":{
+      "duration": 30,
+      "percent": 0.01,
+      "cost": 5000
+  },
+  "policy2":{
+      "min": 0,
+      "max": 5
+  },
+  "policy3":{
+      "cost": 5000,
+      "percent": 0.01,
+      "duration": 30
+  },
+  "tutorial_text": "Each scenario has a goal you need to accomplish to win. These start simple and become more complex.|Click on any tile to bring up a construction Menu, there you will see the things you can add to any location in the town. You’ll find pipes, water treatment, residential, agricultural, and industrial objects here. Explore the menu to see what you can do.|If you are providing your town with clean water it will start to grow and you will earn more funds.|If you need help, click on me to get more info."
+
+}
