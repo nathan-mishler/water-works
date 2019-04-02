@@ -1,0 +1,29 @@
+export interface TileInterface{
+    connectible:boolean;
+    cost:number;
+    current_population:number;
+    current_quality:number;
+    current_units:number;
+    current_water_storage:number;
+    current_water_usage:number;
+    evaporation_per_usage:number;
+    input_quality:number;
+    input_units:number;
+    integrity:number;
+    level:number;
+    max_water_storage:number;
+    max_water_usage:number;
+    max_population:number;
+    min_population:number;
+    money_generated_per_usage:number;
+    name: string;
+    output_quality:number;
+    output_units:number;
+    population_generated_per_usage:number;
+    quality_drop_per_usage:number;
+    recharge_amount:number;
+    treatment_modifier:number;
+    turns_to_die:number;
+    usage_decrease_with_deficit:number;
+    usage_increase_with_surplus:number;
+}

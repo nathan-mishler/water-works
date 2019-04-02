@@ -1,0 +1,28 @@
+{"frames": [
+
+{
+	"filename": "career",
+	"frame": {"x":1,"y":89,"w":152,"h":52},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":52},
+	"sourceSize": {"w":152,"h":52}
+},
+{
+	"filename": "career_hover",
+	"frame": {"x":1,"y":1,"w":186,"h":86},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":186,"h":86},
+	"sourceSize": {"w":188,"h":88}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "career_button.png",
+	"format": "RGBA8888",
+	"size": {"w":188,"h":142},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:f5eb318763f8c638473956d4f18692fd:881990de42ed90fdd08cdbef376f1954:21fc826a87563fce24ff128e0c03e56e$"
+}
+}
